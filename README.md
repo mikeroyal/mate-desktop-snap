@@ -12,7 +12,7 @@ This is the snap for [MATE Desktop](https://mate-desktop.org/), is the continuat
 </p>
 -->
 
-![my-snap-name](https://user-images.githubusercontent.com/45159366/52540578-02d23c00-2d40-11e9-9cf9-8da013efb8a4.png?raw=true "my-snap-name")
+![my-snap-name](https://user-images.githubusercontent.com/45159366/54108470-4c429500-4399-11e9-8b8a-3ad0e831214b.png?raw=true "my-snap-name")
 
 <p align="center">Published for <img src="https://raw.githubusercontent.com/anythingcodes/slack-emoji-for-techies/gh-pages/emoji/tux.png" align="top" width="24" /> with 💝 by Snapcrafters</p>
 
