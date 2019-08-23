@@ -1,12 +1,11 @@
 name: mate-desktop
-version: 1.20
+version: '1.22'
 summary:  MATE Desktop Environment 
 description: a continuation of GNOME 2 desktop.
-  
-adopt-info: devmode # use 'strict' once you have the right plugs and slots
 
 grade: stable
 confinement: devmode
+base: core18
 
 architectures:
   - build-on: amd64
@@ -70,6 +69,8 @@ parts:
     build-packages:
       - git
       - sed
+      - make
+      
 gtk:
     after: [glib, cairo, epoxy, pango, gobject-introspection, gdk-pixbuf, json-glib, atk, at-spi2-atk]
     source: https://gitlab.gnome.org/GNOME/gtk.git
@@ -147,7 +148,6 @@ gtk:
   at-spi2-atk:
     after: [glib, at-spi2-core, atk]
     source: https://gitlab.gnome.org/GNOME/at-spi2-atk.git
-    source-branch: gnome-3-26 # there is no gnome-3-28 branch yet
     plugin: meson
     meson-parameters: [ --prefix=/usr ]
     build-environment: *buildenv
@@ -171,7 +171,6 @@ gtk:
   atk:
     after: [glib]
     source: https://gitlab.gnome.org/GNOME/atk.git
-    source-branch: gnome-3-28
     plugin: autotools
     configflags: [ --prefix=/usr ]
     build-environment: *buildenv
